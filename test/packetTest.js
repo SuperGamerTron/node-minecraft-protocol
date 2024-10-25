@@ -135,6 +135,9 @@ const values = {
     delete results['..']
     return results
   },
+  vec2f: {
+    x: 0, y: 0
+  },
   vec3f: {
     x: 0, y: 0, z: 0
   },
