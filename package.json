@@ -38,11 +38,11 @@
     "intelli-espower-loader": "^1.0.0",
     "minecraft-packets": "^1.1.5",
     "minecraft-protocol": "file:.",
-    "minecraft-wrap": "^1.2.3",
+    "minecraft-wrap": "^1.2.3", 
     "mocha": "^10.0.0",
     "power-assert": "^1.0.0",
     "standard": "^17.0.0",
-    "prismarine-registry": "^1.8.0"
+    "prismarine-registry": "github:SuperGamerTron/prismarine-registry#1.21"
   },
   "dependencies": {
     "@types/readable-stream": "^4.0.0",
@@ -52,7 +52,7 @@
     "endian-toggle": "^0.0.0",
     "lodash.get": "^4.1.2",
     "lodash.merge": "^4.3.0",
-    "minecraft-data": "^3.75.0",
+    "minecraft-data": "github:SuperGamerTron/node-minecraft-data#1.21",
     "minecraft-folder-path": "^1.2.0",
     "node-fetch": "^2.6.1",
     "node-rsa": "^0.4.2",
