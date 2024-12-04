@@ -57,7 +57,27 @@ const nbtValue = {
 
 function getFixedPacketPayload (version, packetName) {
   if (packetName === 'declare_recipes') {
-    if (version['>=']('1.20.5')) {
+    if (version['>=']('1.21.3')) {
+      return {
+        recipes: [
+          {
+            name: 'name',
+            items: []
+          }
+        ],
+        stoneCutterRecipes: [
+          {
+            input: {
+              name: 'name'
+            },
+            slotDisplay: {
+              type: 0,
+              data: 0
+            }
+          }
+        ]
+      }
+    } else if (version['>=']('1.20.5')) {
       return {
         recipes: [
           {
@@ -263,6 +283,60 @@ const values = {
     isDebug: false,
     isFlat: false,
     portalCooldown: 0
+  },
+  MovementFlags: {
+    onGround: true,
+    hasHorizontalCollision: false
+  },
+  ContainerID: 0,
+  PositionUpdateRelatives: {
+    x: true,
+    y: true,
+    z: true,
+    yaw: true,
+    pitch: true,
+    dx: true,
+    dy: true,
+    dz: true,
+    yawDelta: true
+  },
+  RecipeDisplay: {
+    type: 'crafting_shapeless',
+    data: {
+      ingredients: {
+        type: 0,
+        data: 0
+      },
+      result: {
+        type: 0,
+        data: 0
+      },
+      craftingStation: {
+        type: 0,
+        data: 0
+      }
+    }
+  },
+  bitflags: {},
+  optvarint: 0,
+  game_profile: {
+    name: 'name',
+    properties: [{
+      key: 'key',
+      value: 'value',
+      signature: 'signature'
+    }]
+  },
+  IDSet: {
+    name: 'name'
+  },
+  chat_session: {
+    uuid: '00112233-4455-6677-8899-aabbccddeeff',
+    publicKey: {
+      expireTime: 0,
+      keyBytes: Buffer.alloc(0),
+      keySignature: Buffer.alloc(0)
+    }
   }
 }
 
