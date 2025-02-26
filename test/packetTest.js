@@ -194,7 +194,7 @@ const values = {
   i64: [0, 1],
   u64: [0, 1],
   entityMetadata: [
-    { key: 17, value: 0, type: 0 }
+    { key: 17, value: 0, type: 'byte' }
   ],
   topBitSetTerminatedArray: [
     {
@@ -363,11 +363,6 @@ for (const supportedVersion of mc.supportedVersions) {
     before(async function () {
       PORT = await getPort()
       server = new Server(version.minecraftVersion)
-      if (mcData.supportFeature('mcDataHasEntityMetadata')) {
-        values.entityMetadata[0].type = 'byte'
-      } else {
-        values.entityMetadata[0].type = 0
-      }
       return new Promise((resolve) => {
         console.log(`Using port for tests: ${PORT}`)
         server.once('listening', function () {
