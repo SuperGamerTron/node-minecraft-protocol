@@ -419,7 +419,7 @@ const values = {
   lpVec3: { x: 0, y: 0, z: 0 },
   DebugSubscriptionDataType: 0,
   DebugSubscriptionUpdate: {
-    type: 0,
+    type: 0
   },
   DebugSubscriptionEvent: {
     type: 0

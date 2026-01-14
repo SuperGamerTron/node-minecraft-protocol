@@ -33,14 +33,14 @@ function unpack (bits) {
 }
 
 function readLpVec3 (buffer, offset) {
-  if (offset + 1 > buffer.length) throw new PartialReadError('Unexpected end while reading LpVec3')
+  if (offset + 1 > buffer.length) throw new Error('Unexpected end while reading LpVec3')
   const a = buffer.readUInt8(offset)
 
   if (a === 0) {
     return { value: { x: 0, y: 0, z: 0 }, size: 1 }
   }
 
-  if (offset + 6 > buffer.length) throw new PartialReadError('Unexpected end while reading LpVec3')
+  if (offset + 6 > buffer.length) throw new Error('Unexpected end while reading LpVec3')
   const b = buffer.readUInt8(offset + 1)
   const c = buffer.readUInt32LE(offset + 2)
 
